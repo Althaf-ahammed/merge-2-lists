@@ -1,0 +1,26 @@
+def merge_list(list1, list2):
+    merged_data=""
+    k=0
+    l=-1
+    length=len(list2)
+    leng=length-1
+    while(k!=len(list1)):
+        i=list1[k]
+        j=list2[leng]
+        if(i!=None):
+            if(j!=None):
+                merged_data=merged_data+ " " + str(i)+str(j)
+            else:
+                merged_data= merged_data+" "+str(i)
+        else:
+            merged_data= merged_data+" "+str(j)
+        k+=1
+        leng=leng-1
+    resultant_data=merged_data
+    return resultant_data
+
+#Provide different values for the variables and test your program
+list1=['A', 'app','a', 'd', 'ke', 'th', 'doc', 'awa']
+list2=['y','tor','e','eps','ay',None,'le','n']
+merged_data=merge_list(list1,list2)
+print(merged_data)
